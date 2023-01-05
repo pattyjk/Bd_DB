@@ -2,7 +2,9 @@
 
 ### Goals of package
 ```
-· Direct query of sequences to database (e.g., BLASTn)
+· Direct query of sequences to database (BLASTn & vsearch)
+
+· Web interface
 
 · Calculate proportion of the community that exhibits inhibitory function
 
