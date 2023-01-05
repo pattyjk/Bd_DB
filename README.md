@@ -10,5 +10,5 @@
 
 · Pull updated database (pulls most recent database into R from GitHub)
 
-· Import data from other programs and packages commonly used in microbiome studies
+· Import data from other programs and packages commonly used in microbiome studies (QIIME QZA, DADA2, BIOM, USEARCH/VSEARCH, mothur, phyloseq)
 ```
