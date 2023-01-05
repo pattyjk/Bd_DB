@@ -80,13 +80,13 @@ This is a statistice from BLASTn about how good a match our sequences are to one
 
 There's a lot here but we have: () the country the microbe orginated from, () the host species of ampbibian was isolated from, () life stage of the amphbian when it was sampled,  () was the amphbiain sampled in the lab or in the wild?, () the latitude and longitude of the sample, () year the microbe was isolated, () method to test inhibition against the fungi, () temperature the assay was conducted at,  () Bd genotype tested, () the 16S sequencing primers used to identify the microbe, () reference, () 16S rRNA gene sequence of the microbe, () taxonomy based on greengenes/per ident, () taxonomy based on SILVA/per ident, () taxonomy based on NCBI/per ident, () genus/species of database microbe
 
-That's a lot of good stuff. Those researchers were quite busy, ey? Now i bet you want to know how much of these bad boys are in your samples, huh? Let's do that next.
+That's a lot of good stuff. Those researchers were quite busy, ey? Now I bet you want to know how much of these bad boys are in your samples, huh? Let's do that next.
 
 ```
 COMMAND
 ```
 
-This gives us a brand new ASV table that onyl contains inhibitory ASVs. YOu'll notice that the new table is smaller than the original table (this is normal).
+This gives us a brand new ASV table that only contains ASVs that match the database (remember, the databse contains inhibitory, enhancing, and non-inhibitory taxa). You'll notice that the new table is smaller than the original table (this is normal, we can't isolate all the microbes...yet).
 
 ```
 dim(old)
@@ -94,9 +94,11 @@ dim(old)
 dim(new)
 ```
 
-With this new ASV table you can do any analysis that you want (e.g. alpha diversity, modeling, making pretty pictures). But let's say you want to know the percent of inhibitory taxa in each sample, we an do that too!
+With this new ASV table you can do any analysis that you want (e.g. alpha diversity, modeling, making pretty pictures). But let's say you want to know the percent of inhibitory/enhancing/non-inhibitory taxa in each sample, we an do that too!
 
 ```
 COMMAND
 ```
 This gives us a data frame with four columns (1) The sample name, (2) the total read count from the original ASV table, (3) the read count for inhibitory ASVs, (4) the percentage of reads that is inhhibitory (column 3/column 4*100).
+
+That's it (mic drop). This tutorial allows  you to search the entire database. If you have samples from say Madagascar, please see the tutorial on how to make custom databases/analyses that fit your needs (e.g. only isolates from Madagascar). 
