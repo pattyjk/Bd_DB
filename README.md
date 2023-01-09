@@ -1,18 +1,20 @@
-# Bd_DB
+# Bd database
 
 ### Goals of package
 ```
-· Direct query of sequences to database (BLASTn & vsearch)
+· Direct query of sequences to database (vsearch)
 
-· Web interface
+· Web interface (in GitHub)
 
 · Calculate proportion of the community that exhibits inhibitory function
 
+· Antifungal richness calculation
+
 · Implement filtering to subset database based on metadata (e.g. country, frog species)
 
-· Pull updated database (pulls most recent database into R from GitHub)
+· Pull updated database (pulls most recent database into R from GitHub)- not necessary, only update the database when package is updated, provide tutorial for how do do it
 
-· Import data from other programs and packages commonly used in microbiome studies (QIIME QZA, DADA2, BIOM, USEARCH/VSEARCH, mothur, phyloseq)
+· Import data from other programs and packages commonly used in microbiome studies as tutorials (QIIME QZA, DADA2, BIOM, USEARCH/VSEARCH, mothur, phyloseq)
 ```
 
 ## Issues
