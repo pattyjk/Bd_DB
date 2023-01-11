@@ -2,7 +2,9 @@
 
 Metadata aka all that lovely extra information about your hard collected samples (e.g. salinity, life stage, length) is a important part of data analysis. The AmphiBac package can use your metadata, so lets talk about how to import it. Most metadata is easily imported with the base R function 'read.delim'.
 
+```
 meta<-read.delim("metadata_file.txt", header=T)
+```
 
 ## Importing your fasta file of representative sequences of ASV/OTUs
 To do this well use the biostrings package (a dependancy of AmphiBac, so its already installed)
