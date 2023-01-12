@@ -1,3 +1,16 @@
+# Imorting files for use in AmphiBac
+---
+## Importing your fasta file of representative sequences of ASV/OTUs
+To do this well use the biostrings package (a dependancy of AmphiBac, so its already installed)
+```
+library(biostrings)
+fasta.file<-readDNAStringSet("fasta.file.fna")
+```
+Thats it. Not everything has to be hard with coding. With your sequences imported you'll be able to compare them to the databse. See THIS TUTORIAL for how to do that.
+
+---
+AmphiBac's core function is to compare 16S rRNA sequences to our database with the use of vsearch. However, the R-package does offer the ability to do more advanced analyses. As such, here's some scripts for how to import metadata and your ASV/OTU table from a wide variety of bioinformatics paltforms. 
+
 ## Reading in your metadata
 
 Metadata aka all that lovely extra information about your hard collected samples (e.g. salinity, life stage, length) is a important part of data analysis. The AmphiBac package can use your metadata, so lets talk about how to import it. Most metadata is easily imported with the base R function 'read.delim'.
@@ -5,14 +18,6 @@ Metadata aka all that lovely extra information about your hard collected samples
 ```
 meta<-read.delim("metadata_file.txt", header=T)
 ```
-
-## Importing your fasta file of representative sequences of ASV/OTUs
-To do this well use the biostrings package (a dependancy of AmphiBac, so its already installed)
-```
-library(biostrings)
-fasta.file<-readDNAStringSet("fasta.file.fna")
-```
-Thats it. Not everything has to be hard with coding.
 
 ## From biom format
 Do you have a file with an extension ".biom"? This is the Biological Observation Matrix (BIOM, http://biom-format.org/). This is a fairly common format, in particular if youve used QIIME1 or things associated with the Earth Microbiome Project. 
